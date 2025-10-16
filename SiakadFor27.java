@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
-public class SiakadForNoAbsen {
+public class SiakadFor27 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         double nilai, tertinggi = 0, terendah = 100;
+        int jumlahLulus = 0, jumlahTidakLulus = 0;
 
         System.out.println("===== Program Mencari Nilai Tertinggi & Terendah =====");
 
@@ -19,11 +20,19 @@ public class SiakadForNoAbsen {
             if (nilai < terendah) {
                 terendah = nilai;
             }
+            if (nilai >= 60) {
+                jumlahLulus++;
+            } else {
+                jumlahTidakLulus++;
+            }
         }
 
         System.out.println("=====================================================");
         System.out.println("Nilai tertinggi yang ditemukan: " + tertinggi);
         System.out.println("Nilai terendah yang ditemukan: " + terendah);
         System.out.println("=====================================================");
+        
+        System.out.println("Jumlah mahasiswa yang lulus: " + jumlahLulus);
+        System.out.println("Jumlah mahasiswa yang tidak lulus: " + jumlahTidakLulus);
     }
 }
